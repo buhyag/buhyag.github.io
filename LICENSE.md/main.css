@@ -1,0 +1,73 @@
+.cd
+  position: relative
+  box-sizing: border-box
+  width: 100px
+  height: 100px
+  margin: 150px auto
+  color: #666
+  border-radius: 50%
+  border: 10px solid rgba(0,0,0,0)
+  box-shadow: 0 0 0 4px rgba(247, 247, 247, 0.53) , 0 0 0 100px rgba(22, 24, 24, 0.81), 0 0 0 104px rgba(247, 247, 247, 0.67), 0 0 10px 104px rgba(0, 0, 0, 0.64), 0 0 0 60px rgba(27, 27, 27, 0.79) inset, 0 0 10px 60px rgba(0, 0, 0, 0.73) inset
+  animation: spinner 10s linear 0s infinite 
+  &:before
+    content: "晴天"
+    position: absolute
+    top: -75px
+    width: 100%
+    color: #fff
+    text-align: center
+    font-size: 30px
+    font-weight: bold
+    text-shadow: 0 0 40px #000, 0 -1px 0 #f3f3f3, 0 -2px 0 #f3f3f3
+  &:after
+    content: "Copyright © 2016 Kieran. \A All rights reserved."
+    position: absolute
+    top: 125px
+    margin-left: -40px
+    white-space: pre
+    word-wrap: break-word
+    font-size: 13px
+    text-align: center
+    color: rgba(255, 255, 255, 0.81)
+    text-shadow: 0 0 15px #000
+  
+@keyframes spinner
+  from
+    transform: rotate(0deg)
+  to
+    transform: rotate(360deg)
+    
+.music
+  position: absolute
+  width: 0
+  top: 250px
+  left: 0
+  right: 0
+  margin: auto
+  &:before
+    content: "♫"
+    position: absolute
+    opacity: 0
+    left: -220px
+    font-size: 40px
+    animation: music 2.5s infinite ease
+  &:after
+    content: "♪"
+    position: absolute
+    opacity: 0
+    left: 180px
+    font-size: 40px
+    animation: music 3.3s infinite ease
+@keyframes music
+  0%
+    opacity: 0
+    transform: translate(0px,50px)
+  30%
+    transform: rotate(12deg) translate(-30px,0px)
+  45%
+    opacity: 1
+  60%
+    transform: rotate(-12deg) translate(30px,-100px)
+  100%
+    opacity: 0
+    transform: rotate(0deg) translate(0px,-200px)
